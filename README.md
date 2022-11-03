@@ -21,12 +21,16 @@ Mis à jour en nomvembre 2022
 
 ## Création du projet de code et repo
 
-- créer un nouveau repo pour le projet flutter sur Github
-- cloner ce nouveau repo sur la machine local
+- créer un nouveau repo pour le projet flutter sur Github, choisir un repo privé et respecter le nom demandé dans le cours.
+- cloner ce nouveau repo sur la machine local (GitKraken ou autre)
+- taper : flutter upgrade
+- il s'agit de vous assurer d'avoir une version à jour de flutter pour le projet
 - créer un projet flutter de base dans le dossier local du repo
-- faire un commit
+- lancer votre application de base pour vérifier le fonctionnement
+- FAIRE UN COMMIT
+- FAIRE UN PUSH
 
-Faire des commits régulièrement va permettre de voir ce qui change dans le projet
+Faire des commits régulièrement va permettre de voir ce qui change dans le projet 
 pour chaque étape et également de revenir à un point fonctionnel si une étape échoue.
 
 ## installation de firebase-cli
