@@ -13,7 +13,11 @@ Mis à jour en nomvembre 2022
 
 ## Firebase, création du projet et des applications
 
-- dans un
+- dans un navigateur, entrez dans la console de firebase
+- créer un nouveau projet Firebase, vous n'avez pas besoin de Google Analytics 
+- ajouter une application IOS dans le projet créé, vous pouvez télécharger le fichier .plist mais les étapes de configuration de code ne sont pas nécessaires. Nous les ferons dans le projet Flutter à venir
+- ajouter une application Android dans le projet créé, vous pouvez télécharger le fichier .plist mais les étapes de configuration de code ne sont pas nécessaires. Nous les ferons dans le projet Flutter à venir
+- vous n'avez pas à suivre les étapes qui vous propose de changer le code
 
 ## Création du projet de code et repo
 
