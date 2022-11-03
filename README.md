@@ -1,7 +1,7 @@
 # test_flutter_firebase
 
 Ceci est l'explication détaillée de la configuration à faire pour
-obetnir une application Flutter fonctionnant avec Firebase.
+obtenir une application Flutter fonctionnant avec Firebase.
 
 Mis à jour en nomvembre 2022
 
@@ -76,9 +76,28 @@ Vous allez maintenant ajouter plusieurs composantes de Firebase:
 - FAIRE UN COMMIT, encore une fois pour se donner un point de retour et voir ce qui s'est passé.
 - FAIRE UN PUSH
 
-## test dans le code
+## Initialisation dans le projet test dans le code
 
-TODO
+- dans le fichier main.dart du projet
+- on remplace l'ensemble de la fonction "void main() ... { ... }" par
+
+```
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
+}
+```
+
+- partir le projet depuis le terminal dans le dossier du projet : flutter run
+- il va vous proposer d'activer multidex, dites oui
+- lancer l'application depuis votre IDE
+- FAIRE UN COMMIT
+- FAIRE UN PUSH
+
+Ton application est configurée pour Firebase avec succès.
 
 
 
