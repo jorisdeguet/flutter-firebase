@@ -99,10 +99,33 @@ void main() async {
 
 Ton application est configurée pour Firebase avec succès.
 
+## test d'écriture dans firestore
+- dans un navigateur allez dans la console firebase
+- créer une base de données firestore pour le projet
+- choisissez le mode test
+- dans le fichier main.dart, remplacer la fonction _incrementCounter() avec
+```
+void _incrementCounter() {
+    final db = FirebaseFirestore.instance;
+    // Create a new user with a first and last name
+    final user = <String, dynamic>{
+      "first": "Ada",
+      "last": "Lovelace",
+      "born": 1815
+    };
+    db.collection("users").add(user).then((DocumentReference doc) =>
+        print('DocumentSnapshot added with ID: ${doc.id}'));
+    setState(() {
+      _counter++;
+    });
+  }
+```
+- dans un navigateur
+- ouvrir la console de firebase sur le projet et dans le volet Firestore
+- lancer l'application sur un appareil avec une connexion Internet fonctionnelle
+- en appuyant sur le bouton +, on demande l'ajout d'un objet dans firestore
+- dans le navigateur sur le projet dans le volet firestore, vous devriez voir les données appraitre
+- FAIRE UN COMMIT
+- FAIRE UN PUSH
 
 
-
-
-
-Video d'explications:
-https://www.youtube.com/watch?v=0xbKp50F1PE
