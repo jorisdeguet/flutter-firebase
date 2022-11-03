@@ -50,6 +50,9 @@ pour chaque étape et également de revenir à un point fonctionnel si une étap
 - taper : flutterfire configure
 - vous allez être invité à choisir le projet firebase correspondant au projet
 - FAIRE UN COMMIT et au passage regarder quels fichiers ont été configurés
+- FAIRE UN PUSH
+
+Ces étapes permettent de connecter l'application que tu développes avec le projet Firebase.
 
 ## ajout des composants de firebase via les librairies
 
@@ -71,6 +74,7 @@ Vous allez maintenant ajouter plusieurs composantes de Firebase:
 - FINALEMENT, taper flutterfire configure
 - Cette dernière commande s'assure que tout est configuré ok.
 - FAIRE UN COMMIT, encore une fois pour se donner un point de retour et voir ce qui s'est passé.
+- FAIRE UN PUSH
 
 ## test dans le code
 
