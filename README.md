@@ -32,7 +32,7 @@ pour chaque étape et également de revenir à un point fonctionnel si une étap
 
 ## installation de firebase-cli
 
-- suivre les instructions ici
+- suivre les instructions ici : https://firebase.google.com/docs/cli
 - tester en exécutant dans le terminal : firebase login
 
 ## installation de flutterfire-cli
