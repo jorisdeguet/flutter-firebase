@@ -11,6 +11,27 @@ Avoir fait le premier fichier de configuration. S'assurer d'avoir réinistaller 
 
 ## code de détection du status de login
 
+- dans votre IDE
+- dans le fichier dart de votre ecran principal
+- dans la fonction initState
+- ajouter le code suivant
+
+```
+FirebaseAuth.instance
+  .authStateChanges()
+  .listen((User? user) {
+    if (user == null) {
+      print('User is currently signed out!');
+    } else {
+      print('User is signed in!');
+    }
+  });
+  ...  reste de votre initState
+```
+
+- relancer votre application
+- pour l'instant vous devriez toujours voir que c'est "currently signed out!"
+
 ## ajout de google sign_in
 
 - dans un navigateur 
