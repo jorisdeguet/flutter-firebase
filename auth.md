@@ -15,8 +15,7 @@ Avoir fait le premier fichier de configuration. S'assurer d'avoir réinistaller 
 - dans votre IDE
 - dans le fichier dart de votre ecran principal
 - dans la fonction initState
-- ajouter le code suivant
-- la doc de référence se trouve ici : https://firebase.google.com/docs/auth/flutter/start
+- ajouter le code suivant (la doc de référence se trouve ici : https://firebase.google.com/docs/auth/flutter/start)
 
 ```
 FirebaseAuth.instance
