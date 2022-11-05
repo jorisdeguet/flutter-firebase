@@ -4,10 +4,11 @@ Avoir fait le premier fichier de configuration. S'assurer d'avoir réinistaller 
 
 ## installation de la librairie
 
-- si ce n'est pas déjà fait ()
+- si ce n'est pas déjà fait (il faut regarder dans le pubspec pour voir s'il y a déjà la librairie auth de firebase)
 - dans un terminal
 - depuis le dossier du projet flutter
 - taper : flutter pub add firebase_auth
+- COMMIT PUSH
 
 ## code de détection du status de login
 
@@ -15,6 +16,7 @@ Avoir fait le premier fichier de configuration. S'assurer d'avoir réinistaller 
 - dans le fichier dart de votre ecran principal
 - dans la fonction initState
 - ajouter le code suivant
+- la doc de référence se trouve ici : https://firebase.google.com/docs/auth/flutter/start
 
 ```
 FirebaseAuth.instance
@@ -31,6 +33,7 @@ FirebaseAuth.instance
 
 - relancer votre application
 - pour l'instant vous devriez toujours voir que c'est "currently signed out!"
+- COMMIT PUSH
 
 ## ajout de google sign_in
 
@@ -43,8 +46,22 @@ FirebaseAuth.instance
 - taper : flutterfire configure
 
 ```
-bout de code pour signin
+Future<UserCredential> signInWithGoogle() async {
+  // Trigger the authentication flow
+  final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
+  // Obtain the auth details from the request
+  final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+  // Create a new credential
+  final credential = GoogleAuthProvider.credential(
+    accessToken: googleAuth?.accessToken,
+    idToken: googleAuth?.idToken,
+  );
+
+  // Once signed in, return the UserCredential
+  return await FirebaseAuth.instance.signInWithCredential(credential);
+}
 
 ```
 
