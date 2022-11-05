@@ -1,0 +1,30 @@
+# prerequis
+
+Avoir fait le premier fichier de configuration. S'assurer d'avoir réinistaller firebase-cli et flutterfire-cli.
+
+## installation de la librairie
+
+- si ce n'est pas déjà fait ()
+- dans un terminal
+- depuis le dossier du projet flutter
+- taper : flutter pub add firebase_auth
+
+## code de détection du status de login
+
+## ajout de google sign_in
+
+- dans un navigateur 
+- aller dans la console firebase dans votre projet
+- dans le volet authentication, cherche les méthodes de sign in
+- activer le sign in via google
+- dans un navigateur aller à https://pub.dev/packages/google_sign_in
+- copier la dépendance google_sign_in avec la bonne version dans votre pubspec.yaml
+- taper : flutterfire configure
+
+```
+bout de code pour signin
+
+
+```
+
+## ajout d'un signout
