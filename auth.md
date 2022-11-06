@@ -81,3 +81,15 @@ Future<UserCredential> signInWithGoogle() async {
 - relancer l'application et tenter une connexion, tout devrait fonctionner. 
 
 ## ajout d'un signout
+
+- dans votre écran principal,
+- ajouter un bouton qui déconnecte, suit un exemple
+```
+MaterialButton(
+              onPressed: () async {
+                await GoogleSignIn().signOut();
+                await FirebaseAuth.instance.signOut();
+              },
+              child: Text("signout"),
+            ),
+```
