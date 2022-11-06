@@ -86,10 +86,13 @@ Future<UserCredential> signInWithGoogle() async {
 - ajouter un bouton qui déconnecte, suit un exemple
 ```
 MaterialButton(
-              onPressed: () async {
-                await GoogleSignIn().signOut();
-                await FirebaseAuth.instance.signOut();
-              },
-              child: Text("signout"),
-            ),
+  onPressed: () async {
+    await GoogleSignIn().signOut();
+    await FirebaseAuth.instance.signOut();
+  },
+  child: Text("signout"),
+),
 ```
+- relancer l'application
+- On devrait pouoir se connecter et se déconnecter et l'état se lit dans la console
+- COMMIT PUSH
