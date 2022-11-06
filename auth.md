@@ -24,7 +24,7 @@ FirebaseAuth.instance
     if (user == null) {
       print('User is currently signed out!');
     } else {
-      print('User is signed in!');
+      print('User is signed in! ' + user.email!);
     }
   });
   ...  reste de votre initState
@@ -63,5 +63,21 @@ Future<UserCredential> signInWithGoogle() async {
 }
 
 ```
+- ajouter un bouton pour appeler la méthode signInWithGoogle
+- relancer votre application
+- déclencher le bouton pour appeler la méthode
+- on vous demandera de vous connecter sur Google 
+- vous devriez avoir un message "PlatformException(sign_in_failed, com.google.android.gms.common.api.ApiException: 10: , null, null)"
+- pour le sign in Google, il faut ajouter la signature SHA1 de l'application dans notre application Android
+- avec Android Studio ouvrir le dossier android dans votre projet flutter
+- view puis tool windows puis gradle
+- dans la vue gradle, cliquer sur l'éléphant
+- taper : gradle signinReport dans le dialogue qui apparait
+- copier la valeur du SHA1 de la tache google_sign_in_android
+- dans un navigateur
+- dans la console firebase sélectionner l'application Android
+- trouver le bouton "ajouter une empreinte"
+- copier la valeur du SHA1 et valider
+- relancer l'application et tenter une connexion, tout devrait fonctionner. 
 
 ## ajout d'un signout
