@@ -89,6 +89,7 @@ MaterialButton(
   onPressed: () async {
     await GoogleSignIn().signOut();
     await FirebaseAuth.instance.signOut();
+    setState(() {});
   },
   child: Text("signout"),
 ),
@@ -96,3 +97,9 @@ MaterialButton(
 - relancer l'application
 - On devrait pouoir se connecter et se déconnecter et l'état se lit dans la console
 - COMMIT PUSH
+
+## accéder directement a l'utilisateur connecté
+
+- FirebaseAuth.instance.authStateChanges() vu plus haut permet de s'abonner aux changements d'état de connexion
+- on peut aussi facilement accéder a l'utilisateur connecté avec FirebaseAuth.instance.currentUser
+- son id est accessible avec FirebaseAuth.instance.currentUser?.uid se qui permettra d'indiquer le propriétaire des données par la suite.
