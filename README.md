@@ -45,6 +45,8 @@ pour chaque étape et également de revenir à un point fonctionnel si une étap
 
 - dans un terminal (celui de IntellijIdea ou AndroidStudio par exemple)
 - se placer dans le dossier du projet flutter
+- taper : flutter pub add firebase_core
+- cela ajoute la base de la librairie
 - taper : flutterfire configure
 - vous allez être invité à choisir le projet firebase correspondant au projet
 - FAIRE UN COMMIT et au passage regarder quels fichiers ont été configurés
@@ -61,8 +63,6 @@ https://firebase.google.com/docs/flutter/setup?platform=web#available-plugins
 Vous allez maintenant ajouter plusieurs composantes de Firebase:
 - dans un terminal
 - depuis le dossier du projet flutter
-- taper : flutter pub add firebase_core
-- cela ajoute la base de la librairie
 - taper : flutter pub add cloud_firestore
 - il s'agit de la "base de données" de firebase
 - taper : flutter pub add firebase_auth
