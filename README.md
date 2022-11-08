@@ -20,6 +20,7 @@ Mis à jour en nomvembre 2022
 
 - créer un nouveau repo pour le projet flutter sur Github, choisir un repo privé et respecter le nom demandé dans le cours.
 - cloner ce nouveau repo sur la machine local (GitKraken ou autre)
+- dans un terminal (Powershell ou le terminal d'IntelliJ / AndroidStudio)
 - taper : flutter upgrade
 - il s'agit de vous assurer d'avoir une version à jour de flutter pour le projet
 - créer un projet flutter de base dans le dossier local du repo
