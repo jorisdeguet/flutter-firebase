@@ -18,16 +18,20 @@ Si ce n'est pas déjà fait (il faut regarder dans le pubspec pour voir s'il y a
 - ajouter le code suivant (la doc de référence se trouve ici : https://firebase.google.com/docs/auth/flutter/start)
 
 ```
-FirebaseAuth.instance
-  .authStateChanges()
-  .listen((User? user) {
-    if (user == null) {
-      print('User is currently signed out!');
-    } else {
-      print('User is signed in! ' + user.email!);
+@override
+void initState() {
+  FirebaseAuth.instance
+    .authStateChanges()
+    .listen((User? user) {
+      if (user == null) {
+        print('User is currently signed out!');
+      } else {
+        print('User is signed in! ' + user.email!);
+      }
     }
-  });
+  );
   ...  reste de votre initState
+}
 ```
 
 - relancer votre application
