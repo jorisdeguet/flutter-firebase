@@ -69,12 +69,13 @@ Future<UserCredential> signInWithGoogle() async {
 - déclencher le bouton pour appeler la méthode
 - on vous demandera de vous connecter sur Google 
 - vous devriez avoir un message "PlatformException(sign_in_failed, com.google.android.gms.common.api.ApiException: 10: , null, null)"
-- pour le sign in Google, il faut ajouter la signature SHA1 de l'application dans notre application Android
-- avec Android Studio ouvrir le dossier android dans votre projet flutter
-- ouvrir le menu suivant : view -> tool windows -> gradle
-- dans la vue gradle, cliquer sur l'éléphant
-- taper : gradle signinReport dans le dialogue qui apparait
+- SHA1 : pour le sign in Google, il faut ajouter la signature SHA1 de l'application dans notre application Android
+- SHA1 : avec Android Studio, fermer AndroidStudio, ouvrir comme un projet le dossier android dans le projet flutter, en sélectionnant le dossier "android"
+- SHA1 : ouvrir le menu suivant : view -> tool windows -> gradle
+- SHA1 : dans la vue gradle, cliquer sur l'éléphant
+- SHA1 : taper : gradle signinReport dans le dialogue qui apparait
 - copier la valeur du SHA1 de la tache google_sign_in_android
+- fermer le projet Android et re-ouvrir le projet Flutter
 - dans un navigateur
 - dans la console firebase sélectionner l'application Android de votre projet, cliquer sur l'engrenage
 - trouver le bouton "ajouter une empreinte"
