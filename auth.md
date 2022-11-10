@@ -47,12 +47,14 @@ void initState() {
 - dans un navigateur aller à https://pub.dev/packages/google_sign_in
 - copier la dépendance google_sign_in avec la bonne version dans votre pubspec.yaml
 - taper : flutterfire configure
-- copier la fonction suivante dans votre écran Flutter de départ
+- copier la fonction suivante dans votre écran Flutter de départ en remplaçant "gnagnagna" par la valeur en dessous de "CLIENT_ID" dans le fichier ios > Runner > GoogleService-Info.plist
 
 ```
 Future<UserCredential> signInWithGoogle() async {
   // Trigger the authentication flow
-  final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+  final GoogleSignInAccount? googleUser = await GoogleSignIn(
+    clientId: "gnagnagna",
+  ).signIn();
 
   // Obtain the auth details from the request
   final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
@@ -72,6 +74,9 @@ Future<UserCredential> signInWithGoogle() async {
 - relancer votre application
 - déclencher le bouton pour appeler la méthode
 - on vous demandera de vous connecter sur Google 
+
+### configuration google_sign_in pour Android
+
 - vous devriez avoir un message "PlatformException(sign_in_failed, com.google.android.gms.common.api.ApiException: 10: , null, null)"
 - SHA1 : pour le sign in Google, il faut ajouter la signature SHA1 de l'application dans notre application Android
 - SHA1 : avec Android Studio, fermer votre projet Flutter, ouvrir comme un projet le dossier android DANS le projet flutter, en sélectionnant le dossier "android" dans le dialogue d'ouverture de projet
@@ -86,6 +91,10 @@ Future<UserCredential> signInWithGoogle() async {
 - copier la valeur du SHA1 et valider
 - relancer l'application et tenter une connexion, tout devrait fonctionner. 
 - COMMIT PUSH
+
+### configuration google_sign_in pour ios
+
+- 
 
 ## ajout d'un signout
 
