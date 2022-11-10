@@ -94,7 +94,28 @@ Future<UserCredential> signInWithGoogle() async {
 
 ### configuration google_sign_in pour ios
 
-- 
+- ouvrir le fichier ios > Runner > Info.plist
+- à la fin du fichier ajouter quelques lignes vides juste au dessus de "</dict>"
+- dans l'espace vide ajoutez le code suivant en remplaçant gnagnagna par la valeur sous "REVERSED_CLIENT_ID" dans le fichier ios > Runner > GoogleService-Info.plist
+
+```
+<key>CFBundleURLTypes</key>
+    <array>
+    	<dict>
+    		<key>CFBundleTypeRole</key>
+    		<string>Editor</string>
+    		<key>CFBundleURLSchemes</key>
+    		<array>
+    			<!-- TODO Replace this value: -->
+    			<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+    			<string>gnagnagna</string>
+    		</array>
+    	</dict>
+    </array>
+```
+- lancer votre application sur un simulateur IOS ou un appareil IOS sur un mac
+- si vous arrivez à vous connectez
+- COMMIT PUSH
 
 ## ajout d'un signout
 
