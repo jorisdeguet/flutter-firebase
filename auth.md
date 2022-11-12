@@ -47,14 +47,11 @@ void initState() {
 - dans un navigateur aller à https://pub.dev/packages/google_sign_in
 - copier la dépendance google_sign_in avec la bonne version dans votre pubspec.yaml
 - taper : flutterfire configure
-- copier la fonction suivante dans votre écran Flutter de départ en remplaçant "gnagnagna" par la valeur en dessous de "CLIENT_ID" dans le fichier ios > Runner > GoogleService-Info.plist
-
+- copier la fonction suivante dans votre écran Flutter de départ
 ```
 Future<UserCredential> signInWithGoogle() async {
   // Trigger the authentication flow
-  final GoogleSignInAccount? googleUser = await GoogleSignIn(
-    clientId: "gnagnagna",
-  ).signIn();
+  final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
   // Obtain the auth details from the request
   final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
@@ -93,7 +90,7 @@ Future<UserCredential> signInWithGoogle() async {
 - COMMIT PUSH
 
 ### configuration google_sign_in pour ios
-
+- TODO add dans Xcode
 - ouvrir le fichier ios > Runner > Info.plist
 - à la fin du fichier ajouter quelques lignes vides juste au dessus de "</dict>"
 - dans l'espace vide ajoutez le code suivant en remplaçant gnagnagna par la valeur sous "REVERSED_CLIENT_ID" dans le fichier ios > Runner > GoogleService-Info.plist
